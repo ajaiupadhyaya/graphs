@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Product A",
+    "sales": 1200,
+    "profit": 450,
+    "category": "Electronics"
+  },
+  {
+    "name": "Product B",
+    "sales": 980,
+    "profit": 320,
+    "category": "Electronics"
+  },
+  {
+    "name": "Product C",
+    "sales": 1500,
+    "profit": 680,
+    "category": "Home & Garden"
+  },
+  {
+    "name": "Product D",
+    "sales": 750,
+    "profit": 280,
+    "category": "Sports"
+  },
+  {
+    "name": "Product E",
+    "sales": 2100,
+    "profit": 920,
+    "category": "Electronics"
+  },
+  {
+    "name": "Product F",
+    "sales": 890,
+    "profit": 340,
+    "category": "Home & Garden"
+  },
+  {
+    "name": "Product G",
+    "sales": 1350,
+    "profit": 510,
+    "category": "Sports"
+  },
+  {
+    "name": "Product H",
+    "sales": 1680,
+    "profit": 720,
+    "category": "Electronics"
+  }
+]

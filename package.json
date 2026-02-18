@@ -1,0 +1,24 @@
+{
+  "name": "graphs",
+  "version": "1.0.0",
+  "description": "A comprehensive graph visualization tool with artistic templates, automation, and AI-powered features",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "graphs",
+    "visualization",
+    "d3",
+    "p5js",
+    "threejs",
+    "AI",
+    "ML",
+    "charts"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
