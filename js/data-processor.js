@@ -181,10 +181,18 @@ const DataProcessor = {
     },
 
     /**
-     * Sample data randomly
+     * Sample data randomly using Fisher-Yates shuffle
      */
     sample(data, size) {
-        const shuffled = [...data].sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, size);
+        const result = [...data];
+        const sampleSize = Math.min(size, result.length);
+        
+        // Fisher-Yates shuffle for the first 'size' elements
+        for (let i = 0; i < sampleSize; i++) {
+            const j = i + Math.floor(Math.random() * (result.length - i));
+            [result[i], result[j]] = [result[j], result[i]];
+        }
+        
+        return result.slice(0, sampleSize);
     }
 };

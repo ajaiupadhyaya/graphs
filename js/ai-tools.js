@@ -97,11 +97,11 @@ const AITools = {
             cluster: 0
         })).filter(p => typeof p.x === 'number' && typeof p.y === 'number');
 
-        // Initialize centroids randomly
+        // Initialize centroids randomly (ensure unique points)
         let centroids = [];
-        for (let i = 0; i < k; i++) {
-            const randomPoint = points[Math.floor(Math.random() * points.length)];
-            centroids.push({ x: randomPoint.x, y: randomPoint.y });
+        const shuffled = [...points].sort(() => Math.random() - 0.5);
+        for (let i = 0; i < Math.min(k, points.length); i++) {
+            centroids.push({ x: shuffled[i].x, y: shuffled[i].y });
         }
 
         // Iterate
