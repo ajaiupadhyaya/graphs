@@ -59,6 +59,14 @@ python3 -m http.server 8000
 http://localhost:8000
 ```
 
+### Production Deployment
+
+For production use, consider:
+- Hosting library files locally instead of CDN
+- Generating and adding SRI integrity hashes for CDN scripts
+- Using HTTPS for all resources
+- Implementing proper CORS policies
+
 ### Basic Usage
 
 1. **Select a Template**: Choose from artistic, professional, or 3D templates

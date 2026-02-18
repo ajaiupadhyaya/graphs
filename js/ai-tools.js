@@ -97,9 +97,17 @@ const AITools = {
             cluster: 0
         })).filter(p => typeof p.x === 'number' && typeof p.y === 'number');
 
-        // Initialize centroids randomly (ensure unique points)
+        // Initialize centroids using Fisher-Yates shuffle (ensure unique points)
         let centroids = [];
-        const shuffled = [...points].sort(() => Math.random() - 0.5);
+        const shuffled = [...points];
+        
+        // Fisher-Yates shuffle
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        
+        // Take first k points as initial centroids
         for (let i = 0; i < Math.min(k, points.length); i++) {
             centroids.push({ x: shuffled[i].x, y: shuffled[i].y });
         }
